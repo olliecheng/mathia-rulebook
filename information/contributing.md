@@ -14,6 +14,11 @@ This wiki is hosted on GitHub! What you're reading right now has been generated 
   * These plain text files are stored at https://github.com/denosawr/mathia-rulebook.
   * If you want to make changes **to the documentation or rules**, they're stored as Markdown files \(`.md`\) in the `information` and `roles` folders. Click the relevant file, click the Edit button (pencil icon) in the top right and make your changes. You'll need a GitHub account.
   * You **do not** have edit permissions for the main repository. What you can do after you've made your changes, is click on the green "Make a Pull Request" button. A Pull Request is essentially a request to merge your changes with the main version, to update the rulebook with your own version of the rules. This has to be accepted by a maintainer (like @denosawr#8290) before it gets submitted to the live rulebook. This also can facilitate discussion of changes before they go live.
+  * In your Pull Request, feature a brief description of your change(s). If your change is **a clarification of an existing role**, set the base branch as `base:master`. If you have a suggestion for a change to a role, or a new role, make sure that your pull request goes to the `base:changes` branch.
 3. Due to the nature of the pull request, you can submit changes which you think will be controversial. This can facilitate later discussion as they review your proposed changes, but of course there's a chance your Pull Request may be closed without merging your changes.
+
+Here's the way the branches work (for the programmers):
+* Documentation changes are submitted to the `changes` branch, which will merge with `master` after the current game finishes.
+* Code changes and documentation clarifications go to the `master` branch, they can come live immediately if accepted
 
 Thank you for contributing :)
