@@ -15,7 +15,7 @@ The Doctor cannot target the same player two consecutive nights, regardless of w
  The doctor provides almost full immunity. Only the Suicide Bomber can kill a target protected by the Doctor.
 
 - `Doctor → X, Suicide Bomber → X`
- **Result:**  `X dies, Suicide Bomber dies`  
+ **Result:**  `X dies, Suicide Bomber dies`   
  The Doctor cannot prevent a Suicide Bomber kill.
  
 - `Doctor → Vigilante or Doctor → Thief or Doctor → Executioner or Doctor → Suicide Bomber` , where the Vigilante killed a town-aligned player the night before, the thief has achieved their win condition, the executioner has achieved their win condition or the suicide bomber targetted someone that night respectively  
