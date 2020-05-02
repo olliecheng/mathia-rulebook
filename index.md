@@ -13,3 +13,7 @@ To start, here is a recommended list of reading:
 2. [General Rules]({% link information/general-rules.md %})
 3. [How to Play]({% link information/how-to-play.md %})
 4. [Roles]({% link roles/index.md %})
+
+Other useful links:
+* [New Role Template]({% link information/new-role-template.md %})
+* [Contributing]({% link information/contributing.md %})
