@@ -17,3 +17,7 @@ Mafia is a strategy game, which models conflict between multiple groups. The sim
 
 ## Power Roles
 Power roles are players who can perform special actions each night. At the start of the game, power roles are assigned and they are kept for the duration of the game, or until the player dies. They can be aligned with both the Mafia and the Town.
+
+<br>
+
+_Think you have the hang of things? Have a look through [General Rules]({% link information/general-rules.md %}) to continue._

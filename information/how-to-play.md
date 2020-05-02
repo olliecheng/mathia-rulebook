@@ -45,3 +45,8 @@ The Town have the ability to end the game prematurely, if a victory or a loss is
 Furthermore, if the members of the Mafia are known already, one player can choose to alert the Game Masters' of the members, with the agreement of a majority of the Town-aligned players. If they are incorrect, **all members in agreement will be lynched**. If they are correct, the Town will win.
 
 The Mafia also have the option to privately surrender, giving the victory to the Town.
+
+
+<br>
+
+_Now, the nitty gritty: [Roles]({% link roles/index.md %})._
