@@ -23,4 +23,4 @@ Inactivity is modeled on both activity in public chats and private ones. If you 
 
 <br>
 
-_Understand the rules? Find out how to play at [How to Play]({% link information/how-to-play.md %})._
+_Understand the rules? Find out how to play at [How to Play]({{ site.baseurl }}{% link information/how-to-play.md %})._

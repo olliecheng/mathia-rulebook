@@ -9,11 +9,11 @@ This rulebook can read as a manual for the game. Before starting a game of Mafia
 
 To start, here is a recommended list of reading:
 
-1. [About Mafia]({% link information/about-mafia.md %})
-2. [General Rules]({% link information/general-rules.md %})
-3. [How to Play]({% link information/how-to-play.md %})
-4. [Roles]({% link roles/index.md %})
+1. [About Mafia]({{ site.baseurl }}{% link information/about-mafia.md %})
+2. [General Rules]({{ site.baseurl }}{% link information/general-rules.md %})
+3. [How to Play]({{ site.baseurl }}{% link information/how-to-play.md %})
+4. [Roles]({{ site.baseurl }}{% link roles/index.md %})
 
 Other useful links:
-* [New Role Template]({% link information/new-role-template.md %})
-* [Contributing]({% link information/contributing.md %})
+* [New Role Template]({{ site.baseurl }}{% link information/new-role-template.md %})
+* [Contributing]({{ site.baseurl }}{% link information/contributing.md %})

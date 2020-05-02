@@ -20,4 +20,4 @@ Power roles are players who can perform special actions each night. At the start
 
 <br>
 
-_Think you have the hang of things? Have a look through [General Rules]({% link information/general-rules.md %}) to continue._
+_Think you have the hang of things? Have a look through [General Rules]({{ site.baseurl }}{% link information/general-rules.md %}) to continue._

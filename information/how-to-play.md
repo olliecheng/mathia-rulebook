@@ -49,4 +49,4 @@ The Mafia also have the option to privately surrender, giving the victory to the
 
 <br>
 
-_Now, the nitty gritty: [Roles]({% link roles/index.md %})._
+_Now, the nitty gritty: [Roles]({{ site.baseurl }}{% link roles/index.md %})._
