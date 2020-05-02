@@ -8,7 +8,12 @@
 name: Jekyll Build
 
 on:
-  [push, pull_request]
+  push:
+    branches:
+      - "master"
+  pull_request:
+    branches:
+      - "*"
 
 jobs:
   build:
