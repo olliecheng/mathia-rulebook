@@ -1,6 +1,6 @@
 ---
 title: Detective
-layout: default
+layout: role
 ---
 
 > **🏡 Town Aligned**
