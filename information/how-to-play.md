@@ -1,12 +1,12 @@
 ---
-layout: page
+layout: default
 title: How to Play
+permalink: /how-to-play/
 ---
 
-# How to Play
 Right, so you now understand the basic idea of the game. How do you play in Mathia, though? This section serves as a tutorial for how to play the game and the nitty-gritty of how things work.
 
-## Win Condition
+# Win Condition
 The Win Condition is the... uh... condition required to win. Each group has their own individual win condition.
 
 - **Mafia**  
@@ -16,7 +16,7 @@ The Win Condition is the... uh... condition required to win. Each group has thei
 - **Neutral**
  The Neutral group as a whole doesn't win. Each neutral player has their own unique win condition. For example, the Executioner must have the Town lynch their assigned target in order to win. This is explained in the relevant Power Roles section for each member.
 
-## Game Cycle
+# Game Cycle
 Mathia operates on a "real-life" simulation. That is, each real life night, a lynch occurs, the Power Roles perform their action if possible, et cetera.
 
 **Currently, there is a deadline set for 10pm AWST (UTC+8), or 2pm GMT.**
@@ -27,7 +27,7 @@ The game cycle runs as follows:
 2. **Mafia and Vigilante may make a kill** and, if possible, **Doctor saves**
 3. **Other Power Roles perform their actions**
 
-## Voting
+# Voting
 The town lynch occurs through a democratic two-step voting process. Two conditions are required to be satisfied, at the time of final vote counts, in order for a proposed lynch to pass:
 
 - **At least half of all players must have been active.  
@@ -39,7 +39,7 @@ In a realistic game without any inactivity, every player should cast a vote.
 
 If one or more of these conditions are not met, the town will *not* lynch.
 
-## Prematurely Ending the Game
+# Prematurely Ending the Game
 The Town have the ability to end the game prematurely, if a victory or a loss is almost guaranteed. All players have the option to unanimously surrender the game to the Mafia if it is certain that the Maf. will win.
 
 Furthermore, if the members of the Mafia are known already, one player can choose to alert the Game Masters' of the members, with the agreement of a majority of the Town-aligned players. If they are incorrect, **all members in agreement will be lynched**. If they are correct, the Town will win.
