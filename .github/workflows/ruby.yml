@@ -10,7 +10,7 @@ name: Jekyll Build
 on:
   push:
     branches:
-      - "master"
+      - "*"
   pull_request:
     branches:
       - "*"
@@ -72,4 +72,12 @@ jobs:
         uses: peter-evans/commit-comment@v1
         with:
           body: |
-            Built successfully! [Snapshot can be found here.](${{ steps.zeit-deploy.outputs.site }})
+            Commit built successfully! [Snapshot can be found here.](${{ steps.zeit-deploy.outputs.site }})
+            
+      - name: PR comment
+        uses: peter-evans/create-or-update-comment@v1
+        if: github.event_name == 'pull_request'
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            Submitted pull request built successfully! [Snapshot can be found here.](${{ steps.zeit-deploy.outputs.site }})
