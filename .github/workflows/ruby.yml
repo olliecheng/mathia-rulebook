@@ -65,8 +65,12 @@ jobs:
       - name: Upload to Zeit
         id: zeit-deploy
         run: |
+          echo $NOW_ORG_ID
+          echo $NOW_PROJECT_ID
+          echo $ZEIT_TOKEN
           now --token $ZEIT_TOKEN build/ > site.txt
           echo "::set-output name=site::$(cat site.txt)" 
+        
         
       - name: Create commit comment
         uses: peter-evans/commit-comment@v1
