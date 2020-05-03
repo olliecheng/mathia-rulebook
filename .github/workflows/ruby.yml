@@ -66,7 +66,7 @@ jobs:
         id: zeit-deploy
         run: |
           now --token $ZEIT_TOKEN build/ > site.txt
-          echo "::set-output site=$(cat site.txt)::" 
+          echo "::set-output name=site::$(cat site.txt)" 
         
       - name: Create commit comment
         uses: peter-evans/commit-comment@v1
