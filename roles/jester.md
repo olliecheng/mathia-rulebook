@@ -1,15 +1,10 @@
 ---
 title: Jester
 layout: role
+alignment: town OR mafia OR neutral
+enabled: yes OR no
 ---
 
-> **🚧 Neutral Aligned**
+Description of the role goes here.
 
-The Jester's win condition is being lynched. The Jester does not win if they are killed by non-lynch methods.
-
-Currently the Jester role is out of play.
-
-### Interactions
-- `Detective → Jester`  
- **Result:** `Innocent`  
- Neutral roles typically appear innocent.  
+Check out [Contributing]({{ site.baseurl }}{% link information/contributing.md %}) to see how to fill in this role!
