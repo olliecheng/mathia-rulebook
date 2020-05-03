@@ -10,7 +10,7 @@ plugins:
   - jekyll-last-modified-at
 
 last-modified-at:
-  date-format: %e %b
+  date-format: "%e %b"
 
 # Optimize Jekyll
 exclude:
