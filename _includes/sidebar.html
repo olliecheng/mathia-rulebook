@@ -35,12 +35,19 @@
         background: var(--gray-700);
         margin-bottom: 0.93rem;
         outline: 0px;
+        /* max-height: 2.2rem; */
+        overflow: hidden;
+        white-space: nowrap;
     }
 
     [contentEditable=true]:empty:before {
         content: "Search...";
         color: var(--gray-500);
         font-style: italic;
+    }
+
+    [contentEditable=true] br {
+        display: none;
     }
 
     #main-nav>li>a,
@@ -83,6 +90,19 @@
                     } else {
 
                         element.classList.add("hidden");
+                    }
+                }
+            }
+        })
+
+        searchElement.addEventListener("keydown", function (e) {
+            if (e.keyCode == 13) { // Return key
+                if (mainNav.classList.contains("hidden")) {
+                    for (child of allPages.children) {
+                        if (!child.classList.contains("hidden")) {
+                            window.location.href = child.firstChild.href;
+                            return;
+                        }
                     }
                 }
             }
