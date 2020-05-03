@@ -1,6 +1,6 @@
 <div class="sidebar">
     <h1>{{ site.data.navigation.name }}</h1>
-    <div contenteditable="true" class="searchbar">Search...</div>
+    <!-- <div contenteditable="true" class="searchbar">Search...</div> -->
     <ul>
         {% for item in site.data.navigation.links %}
         <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
