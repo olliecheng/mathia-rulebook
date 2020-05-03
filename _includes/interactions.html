@@ -1,0 +1,95 @@
+<div>
+    {% assign interactions = include.content | split: "---" %}
+    {% for interaction in interactions %}
+    {% assign variables = interaction | split: ";" %}
+    <!-- {{variables[0]}} with {{variables[1]}} and {{variables[2]}} -->
+    <!-- <br> -->
+    {% endfor %}
+
+    <div class="interaction">
+        <span class="header">Conditions</span>
+        <div class="interactions-item interactions-blocks-list">
+            <div>Tracker → X</div>
+            <div>X → Y</div>
+        </div>
+
+        <span class="header">Results</span>
+        <ul class="interactions-item interactions-results-list">
+            <li>Tracker is told <span>"X visited Y"</span></li>
+        </ul>
+    </div>
+
+    <div class="interaction">
+        <span class="header">Conditions</span>
+        <div class="interactions-item interactions-blocks-list">
+            <div>Tracker → Mafia A</div>
+            <div>Mafia B kill X</div>
+        </div>
+
+        <span class="header">Results</span>
+        <ul class="interactions-item interactions-results-list">
+            <li>Tracker is told <span>"Mafia A did not visit anybody"</span></li>
+            <li>Player X dies</li>
+        </ul>
+
+        <div style="height: 0.2rem"></div>
+
+        <span class="header">Explanation</span>
+        <div class="interactions-item interactions-explanation">The Tracker did not track the Mafia member who performed
+            the kill (that was Mafia B)</div>
+    </div>
+</div>
+
+<style>
+    .interaction {
+        border-radius: 0.4rem;
+        background: var(--gray-700);
+
+        width: 100%;
+        padding: 0.7rem 0.7rem 0.1rem 0.7rem;
+        margin-top: 2rem;
+    }
+
+    .interaction .header {
+        display: block;
+        margin-bottom: 0.5rem;
+
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.8rem;
+
+        letter-spacing: 0.03rem;
+
+        /* opacity: 0.8; */
+        color: var(--light-accent-color);
+    }
+
+    .interactions-blocks-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0.3rem;
+    }
+
+    .interactions-blocks-list>div {
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .interactions-results-list li span,
+    .interactions-blocks-list>div {
+        background: var(--gray-800);
+        padding: 0.3rem 0.5rem;
+        border-radius: 0.2rem;
+    }
+
+    .interactions-results-list {
+        list-style-position: outside;
+        padding-left: 1.5rem;
+    }
+
+    .interactions-explanation {}
+
+    .interactions-item {
+        margin-bottom: 0.7rem;
+    }
+</style>
