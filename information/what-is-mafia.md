@@ -1,7 +1,7 @@
 ---
 layout: default
-title: About Mafia
-permalink: /about-mafia/
+title: What is Mafia?
+permalink: /what-is-mafia/
 ---
 
 ## What is Mafia?
