@@ -17,6 +17,12 @@
 
       <article class="page">
         <h1 class="page-title">{{ page.title }}</h1>
+        <span class="subtext">Last modified on {% last_modified_at %}. <a
+            href="https://github.com/denosawr/mathia-rulebook/blob/master/{{ page.path }}">View Source</a> or
+          <a href="https://github.com/denosawr/mathia-rulebook/edit/master/{{ page.path }}">Edit</a>.
+        </span>
+        <br>
+        <br>
         {{ content }}
       </article>
 
