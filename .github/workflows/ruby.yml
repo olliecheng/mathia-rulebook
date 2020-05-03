@@ -62,4 +62,14 @@ jobs:
           name: build
 
       - run: ls build
-      - run: now --token $ZEIT_TOKEN build/
+      - name: Upload to Zeit
+        id: zeit-deploy
+        run: now --token $ZEIT_TOKEN build/ | tail -1
+        
+      - name: Create commit comment
+        uses: peter-evans/commit-comment@v1
+        with:
+          body: |
+            Built successfully! [Snapshot can be found here.][1]
+
+            [1]: ${{ steps.zeit-deploy.outputs.output }}
