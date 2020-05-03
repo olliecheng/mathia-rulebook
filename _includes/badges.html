@@ -1,0 +1,48 @@
+<div class="badges">
+    <div class="badge" id="alignment-badge">
+        {% assign alignment = page.alignment | downcase %}
+        {% if alignment == "town" %}
+        <span class="icon">­🏡</span> &nbsp;Town Aligned
+        {% elsif alignment == "mafia" %}
+        <span class="icon">­🗡</span> &nbsp;Mafia Aligned
+        {% elsif alignment == "neutral" %}
+        <span class="icon">­🚧</span> &nbsp;Neutral Aligned
+        {% else %}
+        wrong align
+        {% endif %}
+    </div>
+
+    <div class="badge" id="enabled-badge">
+        {% if page.enabled %}
+        <span class="icon">✅️</span> &nbsp;In play
+        {% else %}
+        <span class="icon">❌</span> &nbsp;Not in play
+        {% endif %}
+    </div>
+</div>
+
+<style>
+    .badges {
+        display: flex;
+    }
+
+    .badge {
+        border-radius: 0.2rem;
+        background-color: var(--gray-700);
+
+        padding: 0 0.7rem 0 0.6rem;
+        margin-bottom: 1rem;
+        margin-right: 0.5rem;
+
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.8rem;
+
+        letter-spacing: 0.03rem;
+        line-height: 2rem;
+    }
+
+    .icon {
+        font-size: 1.1rem;
+    }
+</style>
