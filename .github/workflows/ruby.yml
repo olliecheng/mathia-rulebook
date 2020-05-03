@@ -54,11 +54,15 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: build
-      - name: Deploy Stage
-        uses: artemis-tech/zeit-now-cli@v1
-        env:
+      - name: Install Node.js and npm
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - run: npm i -g now  
+
+      - env:
           ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
           NOW_ORG_ID: ${{ secrets.NOW_ORG_ID }}
           NOW_PROJECT_ID: ${{ secrets.NOW_PROJECT_ID }}
-        with:
-          args: "build/_site/"
+      - run: now --token $ZEIT_TOKEN build/_site/
