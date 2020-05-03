@@ -1,5 +1,5 @@
 ---
-title: Contributing to the Mathia Rulebook
+title: Contributing
 layout: default
 permalink: /contributing/
 ---
