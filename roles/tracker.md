@@ -14,11 +14,15 @@ There are no restrictions on who the Tracker can target.
 
 {% capture interactions %}
 Tracker > X, X > Y;
-Tracker returns Y;
-Why not?;
+Tracker returns "Visited Y";
+
 ---
-Tracker > Mafia A, Mafia A > Tracker;
-Tracker returns A;
-AAAA;
+Tracker > Mafia A, Mafia B kill > X;
+Tracker returns "Did not visit anybody";
+The Tracker did not track the Mafia member who performed the kill (that was Mafia B);
+
+---
+Tracker > Jim's Security, Jim's Security > X + Y + Z;
+???;
 {% endcapture %}
 {% include interactions.html content=interactions %}
