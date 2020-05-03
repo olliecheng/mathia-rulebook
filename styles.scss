@@ -1,47 +1,54 @@
 ---
-# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
-# only main files contain this front matter, not partials.
+# Custom user CSS here!
 ---
 
-//
-//                        ___
-//                       /\_ \
-//  _____     ___     ___\//\ \      __
-// /\ '__`\  / __`\  / __`\\ \ \   /'__`\
-// \ \ \_\ \/\ \_\ \/\ \_\ \\_\ \_/\  __/
-//  \ \ ,__/\ \____/\ \____//\____\ \____\
-//   \ \ \/  \/___/  \/___/ \/____/\/____/
-//    \ \_\
-//     \/_/
-//
-// Designed, built, and released under MIT license by @mdo. Learn more at
-// https://github.com/poole/poole.
+// media queries
+@media only screen and (max-width: 975px) {
+  main {
+    flex-direction: column
+  }
+}
 
-@import "variables";
-@import "base";
-@import "type";
-@import "syntax";
-@import "code";
-@import "layout";
-@import "masthead";
-@import "posts";
-@import "pagination";
-@import "message";
-@import "toc";
-
-// Sass for creating the swatches
-.colors {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-
-  dt {
-    width: 3rem;
-    height: 3rem;
-    border-radius: var(--border-radius);
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,.15);
+@media only screen and (min-width: 975px) {
+  main {
+    flex-direction: row;
   }
 
-  dd {
-    margin-left: var(--spacer);
+  .sidebar {
+    margin-left: var(--spacer-2);
+    width: 12rem;
+    min-width: 12rem;
+    padding: 0 10px; 
   }
+
+  .container {
+    max-width: calc(60rem + 100vw - 100%);
+    width: calc(60rem + 100vw - 100%);
+    // the "100vw - 100%" calculates the scrollbar width
+    // this means that on longer pages, the content won't be shifted
+    // to the left if there is a scrollbar.
+  }
+}
+
+main {
+  display: flex;
+}
+
+.sidebar {
+  display: block;
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0.5rem 0;
+  }
+
+  .searchbar  {
+    margin: 1rem 0 0.5rem 0;
+  }
+
 }
