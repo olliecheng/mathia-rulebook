@@ -60,10 +60,6 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: build
-      - name: Install Node.js and npm
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
 
       - run: npm i -g now  
 
