@@ -64,3 +64,18 @@ main {
 .masthead-title > a > span {
   color: var(--link-color);
 }
+
+.subtext {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.subtext > a {
+  color: inherit;
+}
+
+.subtext > a:hover {
+  color: var(--link-hover-color);
+}
