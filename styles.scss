@@ -7,6 +7,14 @@
   main {
     flex-direction: column
   }
+  
+  .sidebar {
+    padding-bottom: 5em;
+
+    h1::after {
+      content: " Navigation"
+    }
+  }
 }
 
 @media only screen and (min-width: 975px) {
