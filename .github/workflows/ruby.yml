@@ -10,7 +10,7 @@ name: Jekyll Build
 on:
   push:
     branches:
-      - "master"
+      - "*"
   pull_request:
     branches:
       - "*"
