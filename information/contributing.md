@@ -33,6 +33,17 @@ Why? This ensures that the rulebook will keep one specific ruleset during the co
 
 Now, it's up to the Game Masters to discuss or approve your changes. If you have proposed a suggestion, it will probably be discussed in the server.
 
+### Anything else?
+Yes! GitHub will spam your email _hard_. Make sure that you're not watching the `denosawr/mathia-rulebook` repo; if you are, click the "Unwatch" button to not... be spammed to hell. Also, disable email notifications at [https://github.com/settings/notifications](https://github.com/settings/notifications): uncheck 
+
+* Comments on Issues and Pull Requests
+* Pull Request reviews
+* Pull Request pushes
+* Include your own updates
+* Watching: Email
+* Participating: Email
+* GitHub Actions: Email
+
 ### Contributing to the Code
 This repository follows the Github Flow form. That means that if you have a feature, create a new descriptive branch in your own fork and submit a pull request to `base:master`. As `base:master` must always be deployable, ensure your code builds before submitting a PR; the repo also has a custom CI build action to verify this. Do not PR to `base:documentation` if you do not have documentation proposals or changes.
 

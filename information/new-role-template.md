@@ -1,51 +1,54 @@
 ---
 title: New Role Template
 layout: role
+alignment: neutral
+enabled: yes
 permalink: /new-role-template/
 ---
 
+<br>
+<br>
 
-```md
+{% raw %}
+```
 ---
 title: <name of role>
 layout: role
+alignment: town OR mafia OR neutral
+enabled: yes OR no
 ---
 
-> **🏡 Town Aligned**
-**or**
-> **🗡 Mafia Aligned**
-**or**
-> **🚧 Neutral Aligned**
+<Description of the role goes here.>
 
-Description of the role goes here.
+{% capture interactions %}
 
-### Interactions
-- `Actioner → Targer`  <--- THERE ARE TWO SPACES AFTER THIS LINE
- **Result:** `Result goes here, in code blocks`  <--- THERE ARE TWO SPACES AFTER THIS LINE
- Explanation
-^
-THERE IS A SPACE BEFORE RESULT AND EXPLANATION
+Mafia A > Vigilante, Vigilante > Mafia A;  <-- SEMICOLON, COMMA SEPARATED
+X dies, Vigilante dies;                    <-- SEMICOLON, COMMA SEPARATED
+Explanation goes here;                     <-- SEMICOLON
+                       <-- this blank line is optional :)
+---                    <-- THREE LINES FOR A NEW INTERACTION
+Tracker > Mafia A, Mafia B kill > X;       <-- SEMICOLON, COMMA SEPARATED
+Tracker returns "Did not visit anybody";   <-- SEMICOLON, QUOTES
+The Tracker did not track the Mafia member who performed the kill (that was Mafia B);  <-- SEMICOLON
 
-- `Actioner → Target`  
- **Result:** `Result goes here, in code blocks`  
- Explanation
+{% endcapture %}
+{% include interactions.html content=interactions %}
 ```
-
-> **🏡 Town Aligned**
-
-**or**
-> **🗡 Mafia Aligned**
-
-**or**
-> **🚧 Neutral Aligned**
+{% endraw %}
 
 
-Description of the role goes here.
+<Description of the role goes here.>
 
-### Interactions
-- `Actioner → Target`  
- **Result:** `Result goes here, in code blocks`  
- Explanation
-- `Actioner → Target`  
- **Result:** `Result goes here, in code blocks`  
- Explanation
+{% capture interactions %}
+
+Mafia A > Vigilante, Vigilante > Mafia A;
+X dies, Vigilante dies;
+Explanation goes here;
+
+--- 
+Tracker > Mafia A, Mafia B kill > X;
+Tracker returns "Did not visit anybody";
+The Tracker did not track the Mafia member who performed the kill (that was Mafia B);
+
+{% endcapture %}
+{% include interactions.html content=interactions %}

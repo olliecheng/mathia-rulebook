@@ -6,19 +6,6 @@ permalink: /roles/
 
 Below is a list of the roles, including Power Roles, in Mafia. Some of them may not be in play. While a short summary may be given for each role, click on the link for a more comprehensive description of the role.
 
-## Understanding the "Interactions" Section
-An example Interaction will look like this:
-
-> - **`Detective → X`, `Shaman → Detective`** _(L1)_  
-> **Result: `Detective returns "Shaman'd"`** _(L2)_  
-> If Shaman targets Detective, the Detective's action is blocked, and they are made aware of this. _(L3)_
-
-L1 are the "input parameters" i.e. what happens. The format is this: `Player A → Player B` means that Player A targets Player B with their action. The assumption is that Player A is not roleblocked and not reversed i.e. the action actually happens. If a player is given as `X`, `Y`, `A`, `B`, or other, it represents any player who will be represented using that letter.
-
-L2 is the result. `Player A returns "string"` means that Player A is privately told, "string". If other players have been mentioned as a target or another power role in L1, but they are not explicitly listed in L2, they are not told anything.
-
-L3 is an explanation for why this interaction exists.
-
 ### "Ordinary" Roles
 Ordinary roles have no special abilities.
 - [Ordinary Town]({{ site.baseurl }}{% link roles/ordinary-town.md %})

@@ -1,0 +1,111 @@
+<div class="interactions-container">
+    <h3>Interactions</h3>
+
+    {% assign interactions = include.content | split: "---" %}
+    {% for interaction in interactions %}
+    {%- assign strippedInteraction = interaction | strip -%}
+    {% assign variables = strippedInteraction | split: ";" %}
+
+    <div class="interaction">
+        <span class="header">Conditions</span>
+        <div class="interactions-item interactions-blocks-list">
+            {% assign blocks = variables[0] | split: "," %}
+            {% for block in blocks%}
+            <div>{{ block | replace: ">", "→" }}</div>
+            {% endfor %}
+        </div>
+
+        <span class="header">Results</span>
+        {% assign blocks = variables[1] | split: "," %}
+        <ul class="interactions-item interactions-results-list {% if blocks.size == 1 %}lonely{% endif %}">
+            {% for block in blocks %}
+            <li>{{ block }}</li>
+            {% endfor %}
+        </ul>
+
+        {%- assign explanation = variables[2] | strip -%}
+        {%- unless explanation == "" -%}
+        <div style="height: 0.2rem"></div>
+
+        <span class="header">Explanation</span>
+        <div class="interactions-item interactions-explanation">{{ variables[2] }}</div>
+        {% endunless %}
+    </div>
+
+    {% endfor %}
+</div>
+
+<script>
+    // Liquid tags don't support regexes. Go figure.
+    "use strict";
+
+    window.onload = function () {
+        let results = document.querySelectorAll(".interactions-results-list>li");
+        console.log(results);
+        for (let element of results) {
+            element.innerHTML = element.innerHTML.replace(/(".+?")/g, "<span>$1</span>");
+        }
+    }
+</script>
+
+<style>
+    .interactions-container {
+        margin-top: 7rem;
+    }
+
+    .interaction {
+        border-radius: 0.4rem;
+        background: var(--gray-700);
+
+        width: 100%;
+        padding: 0.7rem 0.7rem 0.1rem 0.7rem;
+        margin-top: 1rem;
+    }
+
+    .interaction .header {
+        display: block;
+        margin-bottom: 0.5rem;
+
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.8rem;
+
+        letter-spacing: 0.03rem;
+
+        /* color: var(--light-accent-color); */
+        color: white;
+        opacity: 0.8;
+    }
+
+    .interactions-blocks-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0.3rem;
+    }
+
+    .interactions-blocks-list>div {
+        margin-right: 0.7rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .interactions-results-list li span,
+    .interactions-blocks-list>div {
+        background: var(--gray-800);
+        padding: 0.3rem 0.5rem;
+        border-radius: 0.2rem;
+    }
+
+    .interactions-results-list.lonely {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .interactions-results-list {
+        list-style-position: outside;
+        padding-left: 1rem;
+    }
+
+    .interactions-item {
+        margin-bottom: 0.7rem;
+    }
+</style>
