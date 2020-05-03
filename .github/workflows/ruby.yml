@@ -72,7 +72,7 @@ jobs:
         uses: peter-evans/commit-comment@v1
         with:
           body: |
-            Built successfully! [Snapshot can be found here.](${{ steps.zeit-deploy.outputs.site }})
+            Commit built successfully! [Snapshot can be found here.](${{ steps.zeit-deploy.outputs.site }})
             
       - name: PR comment
         uses: peter-evans/create-or-update-comment@v1
@@ -80,4 +80,4 @@ jobs:
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            Built successfully! [Snapshot can be found here.](${{ steps.zeit-deploy.outputs.site }})
+            Submitted pull request built successfully! [Snapshot can be found here.](${{ steps.zeit-deploy.outputs.site }})
