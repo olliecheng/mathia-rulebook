@@ -21,8 +21,8 @@ Description of the role goes here.
 
 ### Interactions
 - `Actioner → Targer`  <--- THERE ARE TWO SPACES AFTER THIS LINE
- `**Result:** `Result goes here, in code blocks`  <--- THERE ARE TWO SPACES AFTER THIS LINE
- `Explanation
+ **Result:** `Result goes here, in code blocks`  <--- THERE ARE TWO SPACES AFTER THIS LINE
+ Explanation
 ^
 THERE IS A SPACE BEFORE RESULT AND EXPLANATION
 
