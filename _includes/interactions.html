@@ -39,13 +39,13 @@
     // Liquid tags don't support regexes. Go figure.
     "use strict";
 
-    window.onload = function () {
+    window.addEventListener("load", function (e) {
         let results = document.querySelectorAll(".interactions-results-list>li");
         console.log(results);
         for (let element of results) {
             element.innerHTML = element.innerHTML.replace(/(".+?")/g, "<span>$1</span>");
         }
-    }
+    });
 </script>
 
 <style>
