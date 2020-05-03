@@ -1,9 +1,91 @@
 <div class="sidebar">
-    <h1>{{ site.data.navigation.name }}</h1>
-    <!-- <div contenteditable="true" class="searchbar">Search...</div> -->
-    <ul>
+    <!-- <h1>{{ site.data.navigation.name }}</h1> -->
+    <div contenteditable="true" id="search"></div>
+    <ul id="main-nav">
         {% for item in site.data.navigation.links %}
+        {%- assign strippedTitle = item.title | strip -%}
+        {% if strippedTitle == "" %}
+        <li class="divider"></li>
+        {% else %}
         <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+        {% endif %}
         {% endfor %}
     </ul>
+
+    <ul id="all-pages">
+        {% for item in site.pages %}
+        <li class="hidden"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+    </ul>
+
 </div>
+
+<style>
+    .hidden {
+        display: none;
+    }
+
+    .divider {
+        height: 1rem;
+    }
+
+    #search {
+        padding: 0.3rem 0.5rem;
+        border-radius: 0.2rem;
+        background: var(--gray-700);
+        margin-bottom: 0.93rem;
+        outline: 0px;
+    }
+
+    [contentEditable=true]:empty:before {
+        content: "Search...";
+        color: var(--gray-500);
+        font-style: italic;
+    }
+
+    #main-nav>li>a,
+    #all-pages>li>a {
+        text-decoration: none;
+    }
+</style>
+
+<script>
+    window.addEventListener("load", function (e) {
+        let searchElement = document.getElementById("search");
+        let mainNav = document.getElementById("main-nav");
+        let allPages = document.getElementById("all-pages");
+
+        searchElement.focus();
+
+        searchElement.addEventListener("input", function (e) {
+            let contents = this.textContent.trim().toLowerCase();
+            if (!contents.length) {
+                // show search placeholder (Search...)
+                this.innerHTML = "";
+
+                mainNav.classList.remove("hidden");
+                for (element of allPages.children) {
+                    element.classList.add("hidden");
+                }
+                return
+            }
+
+            if (contents.length < 2) {
+                mainNav.classList.add("hidden");
+                for (element of allPages.children) {
+                    element.classList.remove("hidden");
+                }
+            } else {
+                mainNav.classList.add("hidden");
+                for (element of allPages.children) {
+                    if (element.textContent.toLowerCase().includes(contents)) {
+                        element.classList.remove("hidden");
+                    } else {
+
+                        element.classList.add("hidden");
+                    }
+                }
+            }
+        })
+    })
+</script>

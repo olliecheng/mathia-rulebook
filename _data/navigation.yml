@@ -3,9 +3,11 @@ links:
 
 - title: Home
   url: /
+  
+- title: 
 
-- title: About Mafia
-  url: /about-mafia
+- title: What is Mafia?
+  url: /what-is-mafia
 
 - title: General Rules
   url: /general-rules
@@ -16,9 +18,15 @@ links:
 - title: Roles
   url: /roles
 
+- title: 
+
 - title: New Role Template
   url: /new-role-template
 
 - title: Contributing
   url: /contributing
 
+- title:
+
+- title: About Mathia
+  url: /about

@@ -1,7 +1,10 @@
 ---
 layout: default
 title: Welcome to Mathia!
+permalink: /
 ---
+
+[_Find out about the Mathia Discord server here!_]({{ site.baseurl }}/about)
 
 Welcome to the rulebook for the Mathia Discord server! Here, we play a modified version of Mafia, and this rulebook details the rules that we use.
 
@@ -9,7 +12,7 @@ This rulebook can read as a manual for the game. Before starting a game of Mafia
 
 To start, here is a recommended list of reading:
 
-1. [About Mafia]({{ site.baseurl }}{% link information/about-mafia.md %})
+1. [What is Mafia?]({{ site.baseurl }}{% link information/what-is-mafia.md %})
 2. [General Rules]({{ site.baseurl }}{% link information/general-rules.md %})
 3. [How to Play]({{ site.baseurl }}{% link information/how-to-play.md %})
 4. [Roles]({{ site.baseurl }}{% link roles/index.md %})
