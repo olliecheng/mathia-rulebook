@@ -61,6 +61,4 @@ jobs:
         with:
           name: build
 
-      - run: npm i -g now  
-
       - run: now --token $ZEIT_TOKEN build/_site/
