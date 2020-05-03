@@ -4,6 +4,8 @@ title: Welcome to Mathia!
 permalink: /
 ---
 
+[_Find out about the Mathia Discord server here!_]({{ site.baseurl }}/about)
+
 Welcome to the rulebook for the Mathia Discord server! Here, we play a modified version of Mafia, and this rulebook details the rules that we use.
 
 This rulebook can read as a manual for the game. Before starting a game of Mafia, make sure to understand the basic structure of the game, the general rules (listed below) and the basic gist of each role. On the sidebar on the right, you can find a more comprehensive detail of each role and their function.
