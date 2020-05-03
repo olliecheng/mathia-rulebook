@@ -55,10 +55,10 @@ jobs:
         with:
           name: build
       - name: Deploy Stage
-        uses: amondnet/now-deployment@v2.0.2
+        uses: artemis-tech/zeit-now-cli@v1
+        env:
+          ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
+          NOW_ORG_ID: ${{ secrets.NOW_ORG_ID }}
+          NOW_PROJECT_ID: ${{ secrets.NOW_PROJECT_ID }}
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          zeit-token: ${{ secrets.ZEIT_TOKEN }}
-          now-org-id: ${{ secrets.NOW_ORG_ID }}
-          now-project-id: ${{ secrets.NOW_PROJECT_ID }}
-          working-directory: build/_site/
+          args: "build/_site/"
