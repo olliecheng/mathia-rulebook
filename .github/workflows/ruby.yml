@@ -61,4 +61,5 @@ jobs:
         with:
           name: build
 
-      - run: now --token $ZEIT_TOKEN build/_site/
+      - run: ls build
+      - run: now --token $ZEIT_TOKEN build/
