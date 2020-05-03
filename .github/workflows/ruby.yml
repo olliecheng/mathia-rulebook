@@ -16,10 +16,9 @@ on:
       - "*"
 
 jobs:
-  build-and-deploy:
-
+  build:
+    name: "build site"
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby
@@ -39,22 +38,27 @@ jobs:
         bundle install --jobs 4 --retry 3
     - name: Run Jekyll
       run: bundle exec jekyll build
+    - name: Upload build
+      uses: actions/upload-artifact@v1
+      with:
+        name: build
+        path: _site
 
-    - name: ZEIT Now Staging
-      uses: amondnet/now-deployment@v2.0.2
-      id: now-deployment-staging
-      if: github.event_name == 'pull_request'
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        zeit-token: ${{ secrets.ZEIT_TOKEN }}
-        now-org-id: ${{ secrets.NOW_ORG_ID }}
-        now-project-id: ${{ secrets.NOW_PROJECT_ID }}
-    - name: ZEIT Now Production
-      uses: amondnet/now-deployment@v2.0.2
-      if: github.event_name == 'push'
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        zeit-token: ${{ secrets.ZEIT_TOKEN }}
-        now-org-id: ${{ secrets.NOW_ORG_ID }}
-        now-project-id: ${{ secrets.NOW_PROJECT_ID }}
-        now-args: '--prod '
+      
+  deploy:
+    name: "deploy site"
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Fetch _site
+        uses: actions/download-artifact@v1
+        with:
+          name: build
+      - name: Deploy Stage
+        uses: amondnet/now-deployment@v2.0.2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          zeit-token: ${{ secrets.ZEIT_TOKEN }}
+          now-org-id: ${{ secrets.NOW_ORG_ID }}
+          now-project-id: ${{ secrets.NOW_PROJECT_ID }}
+          working-directory: build/_site/
