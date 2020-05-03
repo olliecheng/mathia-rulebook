@@ -14,3 +14,8 @@ Hi there! We're a group of people who play Mafia on the Internet, over Discord. 
 Website was made by `@denosawr#8290` and is hosted on GitHub Pages through Jekyll. The source code can be found on [GitHub](https://github.com/denosawr/mathia-rulebook). The ruleset has been made with the love of all the players on the server, though!
 
 We hope you can join us sometime soon :)
+
+<br>
+<br>
+
+_Website last built at {{ site.time }}_.

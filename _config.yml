@@ -7,10 +7,6 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-seo-tag
-  - jekyll-last-modified-at
-
-last-modified-at:
-  date-format: "%e %b"
 
 # Optimize Jekyll
 exclude:

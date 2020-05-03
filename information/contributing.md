@@ -20,16 +20,11 @@ Your changes must be in a specific format in order to make everything work. Let'
 
 First, head over to where the code is hosted, on [GitHub](https://github.com/denosawr/mathia-rulebook). The files in this wiki are typed using Markdown, which is a word preprocessor like LaTeX. Unlike Microsoft Word, you don't `Cmd+B` in order to type bold! You use `**bold**`. The formatting is almost identical to the formatting supported by Discord. A quick search online for "Github Flavoured Markdown" should explain how to use Markdown, if you're still unsure.
 
-There are two folders of note here. One is the `information` folder, which contains general information like `how-to-play.md`. The next is the `roles` folder, which contains information about each role. Let's say you want to edit the role `detective.md`.
+If you want to edit an existing page, you can scroll down to the bottom of the page and click "Edit on GitHub". If you want to add a new role, go to the `roles` folder on the GitHub repo, and create a new file with the name of the role you wish to add.
 
 There is an excellent tutorial on how to edit files and submit a pull request [here](https://help.github.com/en/github/managing-files-in-a-repository/editing-files-in-another-users-repository). Check it out for an explanation of how to create a pull request.
 
-The destination of your pull request is important. If you're submitting:
-* A clarification of an existing rule or role, or further Interactions: create a PR directly to `base:master` (the default branch).
-* A proposed change or a new rule which has been put in place: create a PR to `base:documentation`.
-* Make sure your pull request never goes to any other branches!
-
-Why? This ensures that the rulebook will keep one specific ruleset during the course of a game.
+Always ensure that your changes, be it suggestions, or clarifications to the existing rules, are pointed to the `base:master` branch when you submit a Pull Request.
 
 Now, it's up to the Game Masters to discuss or approve your changes. If you have proposed a suggestion, it will probably be discussed in the server.
 
