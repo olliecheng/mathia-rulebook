@@ -1,7 +1,7 @@
 {% for page in site.pages %}
 
 {% assign absURLBit = page.path | split: "." | first %}
-{% assign actualURL = site.baseurl | append: "../" | append: absURLBit %}
+{% assign actualURL = site.baseurl | append: "/" | append: absURLBit %}
 {% assign parseString = include.template 
     | replace: "$title", page.title 
     | replace: "$url", actualURL
