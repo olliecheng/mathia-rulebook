@@ -1,8 +1,8 @@
 ---
 title: Ordinary Mafia
 layout: role
-alignment: town OR mafia OR neutral
-enabled: yes OR no
+alignment: mafia
+enabled: yes
 ---
 
 Description of the role goes here.

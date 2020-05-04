@@ -1,8 +1,8 @@
 ---
 title: Doctor
 layout: role
-alignment: town OR mafia OR neutral
-enabled: yes OR no
+alignment: town
+enabled: yes
 ---
 
 Description of the role goes here.
