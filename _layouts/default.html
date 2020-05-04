@@ -18,26 +18,27 @@
       <article class="page">
         <h1 class="page-title">{{ page.title }}</h1>
         {{ content }}
+
+        <footer>
+          <span class="subtext">
+            <a href="https://github.com/denosawr/mathia-rulebook/blob/master/{{ page.path }}">View
+              Source</a> or
+            <a href="https://github.com/denosawr/mathia-rulebook/edit/master/{{ page.path }}">Edit</a> on GitHub. Make
+            sure
+            to check out <a href="{{ site.baseurl }}/contributing">Contributing</a> to see how to make changes.
+
+            <br>
+
+            Website designed with ❤ by <a href="https://github.com/denosawr/">@denosawr</a> and hosted on GitHub
+            Pages using Jekyll. Site source <a href="https://github.com/denosawr/mathia-rulebook">here</a>.
+          </span>
+        </footer>
       </article>
 
       {% include sidebar.html %}
 
     </main>
 
-    <footer>
-      <span class="subtext">
-        <a href="https://github.com/denosawr/mathia-rulebook/blob/master/{{ page.path }}">View
-          Source</a> or
-        <a href="https://github.com/denosawr/mathia-rulebook/edit/master/{{ page.path }}">Edit</a> on GitHub. Make sure
-        to check out <a href="{{ site.baseurl }}/contributing">Contributing</a> to see how to make changes.
-
-        <br>
-        <br>
-
-        Website designed with ❤ by <a href="https://github.com/denosawr/">@denosawr</a> and hosted on GitHub
-        Pages using Jekyll. Original repo source <a href="https://github.com/denosawr/mathia-rulebook">here</a>.
-      </span>
-    </footer>
   </div>
 
   {% if site.ga_analytics %}

@@ -31,6 +31,7 @@
 
   .container {
     max-width: calc(60rem + 100vw - 100%);
+    padding-left: calc(var(--spacer-2) + 100vw - 100%);
     width: calc(60rem + 100vw - 100%);
     // the "100vw - 100%" calculates the scrollbar width
     // this means that on longer pages, the content won't be shifted
@@ -69,7 +70,11 @@ main {
   color: var(--gray-600);
   font-size: 0.9rem;
   font-style: italic;
+}
+
+footer {
   margin-bottom: 1rem;
+  margin-top: 6rem;
 }
 
 .subtext > a {
