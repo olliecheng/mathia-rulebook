@@ -106,7 +106,7 @@
                 if (mainNav.classList.contains("hidden")) {
                     for (child of allPages.children) {
                         if (!child.classList.contains("hidden")) {
-                            window.location.href = child.firstChild.href;
+                            window.location.href = child.firstElementChild.href;
                             return;
                         }
                     }
