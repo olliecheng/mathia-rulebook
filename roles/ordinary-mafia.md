@@ -4,6 +4,7 @@ layout: role
 alignment: mafia
 enabled: yes
 description: the informed minority
+special: ordinary
 ---
 
 Description of the role goes here.

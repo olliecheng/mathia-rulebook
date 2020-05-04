@@ -4,6 +4,7 @@ layout: role
 alignment: town
 enabled: yes
 description: the uninformed majority
+special: ordinary
 ---
 
 Description of the role goes here.
