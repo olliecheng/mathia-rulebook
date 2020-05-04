@@ -3,6 +3,7 @@ title: Thief
 layout: role
 alignment: neutral
 enabled: yes
+description: steals abilities to win
 ---
 
 Description of the role goes here.

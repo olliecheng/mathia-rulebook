@@ -3,6 +3,7 @@ title: Detective
 layout: role
 alignment: town
 enabled: yes
+description: investigates a player every night to determine alignment
 ---
 
 Description of the role goes here.

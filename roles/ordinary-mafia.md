@@ -3,6 +3,7 @@ title: Ordinary Mafia
 layout: role
 alignment: mafia
 enabled: yes
+description: the informed minority
 ---
 
 Description of the role goes here.

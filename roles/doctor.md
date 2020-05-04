@@ -3,6 +3,7 @@ title: Doctor
 layout: role
 alignment: town
 enabled: yes
+description: can give a player temporary almost-immunity for a night
 ---
 
 Description of the role goes here.

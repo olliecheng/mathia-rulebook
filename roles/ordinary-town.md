@@ -3,6 +3,7 @@ title: Ordinary Town
 layout: role
 alignment: town
 enabled: yes
+description: the uninformed majority
 ---
 
 Description of the role goes here.

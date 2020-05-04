@@ -1,8 +1,6 @@
 ---
 title: New Role Template
-layout: role
-alignment: neutral
-enabled: yes
+layout: default
 permalink: /new-role-template/
 ---
 
@@ -16,9 +14,10 @@ title: <name of role>
 layout: role
 alignment: town OR mafia OR neutral
 enabled: yes OR no
+description: short description of role
 ---
 
-<Description of the role goes here.>
+Description of the role goes here.
 
 {% capture interactions %}
 
@@ -37,7 +36,7 @@ The Tracker did not track the Mafia member who performed the kill (that was Mafi
 {% endraw %}
 
 
-<Description of the role goes here.>
+Description of the role goes here.
 
 {% capture interactions %}
 
