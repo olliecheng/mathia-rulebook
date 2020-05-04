@@ -1,8 +1,9 @@
 ---
 title: Jester
 layout: role
-alignment: town OR mafia OR neutral
-enabled: yes OR no
+alignment: neutral
+enabled: no
+description: must get themselves lynched to win, has no abilities
 ---
 
 Description of the role goes here.

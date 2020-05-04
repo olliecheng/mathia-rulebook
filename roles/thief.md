@@ -1,8 +1,9 @@
 ---
 title: Thief
 layout: role
-alignment: town OR mafia OR neutral
-enabled: yes OR no
+alignment: neutral
+enabled: yes
+description: steals abilities to win
 ---
 
 Description of the role goes here.

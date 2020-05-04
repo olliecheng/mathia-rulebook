@@ -1,8 +1,9 @@
 ---
 title: Watcher
 layout: role
-alignment: town OR mafia OR neutral
-enabled: yes OR no
+alignment: town
+enabled: no
+description: can see who targets a player
 ---
 
 Description of the role goes here.

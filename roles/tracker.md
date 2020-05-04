@@ -3,6 +3,7 @@ title: Tracker
 layout: role
 alignment: town
 enabled: yes
+description: can see who a player targets
 ---
 
 

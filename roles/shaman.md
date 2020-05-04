@@ -1,8 +1,9 @@
 ---
 title: Shaman
 layout: role
-alignment: town OR mafia OR neutral
-enabled: yes OR no
+alignment: mafia
+enabled: yes
+description: can disable a player’s abilities for a night
 ---
 
 Description of the role goes here.

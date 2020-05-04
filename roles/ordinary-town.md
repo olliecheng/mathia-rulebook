@@ -1,8 +1,10 @@
 ---
 title: Ordinary Town
 layout: role
-alignment: town OR mafia OR neutral
-enabled: yes OR no
+alignment: town
+enabled: yes
+description: the uninformed majority
+special: ordinary
 ---
 
 Description of the role goes here.

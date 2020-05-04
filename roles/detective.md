@@ -1,8 +1,9 @@
 ---
 title: Detective
 layout: role
-alignment: town OR mafia OR neutral
-enabled: yes OR no
+alignment: town
+enabled: yes
+description: investigates a player every night to determine alignment
 ---
 
 Description of the role goes here.

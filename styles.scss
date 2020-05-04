@@ -88,3 +88,11 @@ footer {
 .page {
   width: 100%;
 }
+
+.disabled {
+  color: var(--gray-600);
+
+  a {
+    color: inherit;
+  }
+}

@@ -1,0 +1,82 @@
+{% for page in site.pages %}
+
+{% assign absURLBit = page.path | split: "." | first %}
+{% assign actualURL = site.baseurl | append: "../" | append: absURLBit %}
+{% assign parseString = include.template 
+    | replace: "$title", page.title 
+    | replace: "$url", actualURL
+    | replace: "$description", page.description
+%}
+
+{% unless include.param1 == nil %}
+{% assign params = include.param1 | split: "="  %}
+{%- assign key = params[0] | strip | downcase -%}
+{%- assign value = params[1] | strip | downcase -%}
+{% if value=="yes" %}
+{% assign value=true %}
+{% elsif value=="no" %}
+{% assign value=false %}
+{% elsif value=="empty" %}
+{% assign value=nil %}
+{% endif %}
+{% if page[key] == value %}
+
+{% unless include.param2 == nil %}
+{% assign params = include.param2 | split: "="  %}
+{%- assign key = params[0] | strip | downcase -%}
+{%- assign value = params[1] | strip | downcase -%}
+{% if value=="yes" %}
+{% assign value=true %}
+{% elsif value=="no" %}
+{% assign value=false %}
+{% elsif value=="empty" %}
+{% assign value=nil %}
+{% endif %}
+{% if page[key] == value %}
+
+{% unless include.param3 == nil %}
+{% assign params = include.param3 | split: "="  %}
+{%- assign key = params[0] | strip | downcase -%}
+{%- assign value = params[1] | strip | downcase -%}
+{% if value=="yes" %}
+{% assign value=true %}
+{% elsif value=="no" %}
+{% assign value=false %}
+{% elsif value=="empty" %}
+{% assign value=nil %}
+{% endif %}
+{% if page[key] == value %}
+
+{% unless include.param4 == nil %}
+{% assign params = include.param4 | split: "="  %}
+{%- assign key = params[0] | strip | downcase -%}
+{%- assign value = params[1] | strip | downcase -%}
+{% if value=="yes" %}
+{% assign value=true %}
+{% elsif value=="no" %}
+{% assign value=false %}
+{% elsif value=="empty" %}
+{% assign value=nil %}
+{% endif %}
+
+{% if page[key] == value %}
+{{parseString}}
+{% endif %}
+
+{% else %}
+{{parseString}}
+{% endunless %}
+{% endif %}
+{% else %}
+{{parseString}}
+{% endunless %}
+{% endif %}
+{% else %}
+{{parseString}}
+{% endunless %}
+{% endif %}
+{% else %}
+{{parseString}}
+{% endunless %}
+
+{% endfor %}

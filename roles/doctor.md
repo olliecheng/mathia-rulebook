@@ -1,8 +1,9 @@
 ---
 title: Doctor
 layout: role
-alignment: town OR mafia OR neutral
-enabled: yes OR no
+alignment: town
+enabled: yes
+description: can give a player temporary almost-immunity for a night
 ---
 
 Description of the role goes here.
