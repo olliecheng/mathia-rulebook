@@ -3,34 +3,34 @@
 
     {% assign interactions = include.content | split: "---" %}
     {% for interaction in interactions %}
-    {%- assign strippedInteraction = interaction | strip -%}
-    {% assign variables = strippedInteraction | split: ";" %}
+        {%- assign strippedInteraction = interaction | strip -%}
+        {% assign variables = strippedInteraction | split: ";" %}
 
-    <div class="interaction">
-        <span class="header">Conditions</span>
-        <div class="interactions-item interactions-blocks-list">
-            {% assign blocks = variables[0] | split: "," %}
-            {% for block in blocks%}
-            <div>{{ block | replace: ">", "→" }}</div>
-            {% endfor %}
+        <div class="interaction">
+            <span class="header">Conditions</span>
+            <div class="interactions-item interactions-blocks-list">
+                {% assign blocks = variables[0] | split: "," %}
+                {% for block in blocks%}
+                    <div>{{ block | replace: ">", "→" }}</div>
+                {% endfor %}
+            </div>
+
+            <span class="header">Results</span>
+            {% assign blocks = variables[1] | split: "," %}
+            <ul class="interactions-item interactions-results-list {% if blocks.size == 1 %}lonely{% endif %}">
+                {% for block in blocks %}
+                    <li>{{ block }}</li>
+                {% endfor %}
+            </ul>
+
+            {%- assign explanation = variables[2] | strip -%}
+            {%- unless explanation == "" -%}
+                <div style="height: 0.2rem"></div>
+
+                <span class="header">Explanation</span>
+                <div class="interactions-item interactions-explanation">{{ variables[2] }}</div>
+            {% endunless %}
         </div>
-
-        <span class="header">Results</span>
-        {% assign blocks = variables[1] | split: "," %}
-        <ul class="interactions-item interactions-results-list {% if blocks.size == 1 %}lonely{% endif %}">
-            {% for block in blocks %}
-            <li>{{ block }}</li>
-            {% endfor %}
-        </ul>
-
-        {%- assign explanation = variables[2] | strip -%}
-        {%- unless explanation == "" -%}
-        <div style="height: 0.2rem"></div>
-
-        <span class="header">Explanation</span>
-        <div class="interactions-item interactions-explanation">{{ variables[2] }}</div>
-        {% endunless %}
-    </div>
 
     {% endfor %}
 </div>
@@ -55,7 +55,8 @@
 
     .interaction {
         border-radius: 0.4rem;
-        background: var(--gray-700);
+        /* background: var(--gray-700); */
+        border: 3px solid var(--gray-700);
 
         width: 100%;
         padding: 0.7rem 0.7rem 0.1rem 0.7rem;
@@ -91,8 +92,15 @@
     .interactions-results-list li span,
     .interactions-blocks-list>div {
         background: var(--gray-800);
+        border: 2px solid var(--gray-600);
         padding: 0.3rem 0.5rem;
         border-radius: 0.2rem;
+
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        font-weight: 600;
+
+        letter-spacing: 0.03rem;
     }
 
     .interactions-results-list.lonely {
