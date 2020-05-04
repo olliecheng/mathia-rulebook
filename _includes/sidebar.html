@@ -3,18 +3,24 @@
     <div contenteditable="true" id="search"></div>
     <ul id="main-nav">
         {% for item in site.data.navigation.links %}
-        {%- assign strippedTitle = item.title | strip -%}
-        {% if strippedTitle == "" %}
-        <li class="divider"></li>
-        {% else %}
-        <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
-        {% endif %}
+            {%- assign strippedTitle = item.title | strip -%}
+            {% if strippedTitle == "" %}
+                <li class="divider"></li>
+            {% else %}
+                <li>
+                    <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                </li>
+            {% endif %}
         {% endfor %}
     </ul>
 
     <ul id="all-pages">
         {% for item in site.pages %}
-        <li class="hidden"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+            {% unless item.title == "404: Page not found" %}
+                <li class="hidden">
+                    <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                </li>
+            {% endunless %}
         {% endfor %}
     </ul>
 
