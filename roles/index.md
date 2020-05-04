@@ -6,31 +6,116 @@ permalink: /roles/
 
 Below is a list of the roles, including Power Roles, in Mafia. Some of them may not be in play. While a short summary may be given for each role, click on the link for a more comprehensive description of the role.
 
+<span class="disabled">Gray test like this indicates that the role is not currently in play.</span>
+
+
 ### "Ordinary" Roles
 Ordinary roles have no special abilities.
-- [Ordinary Town]({{ site.baseurl }}{% link roles/ordinary-town.md %})
-- [Ordinary Mafia]({{ site.baseurl }}{% link roles/ordinary-mafia.md %})
-- _there is no Neutral aligned ordinary role._
+
+<ul>
+{% for page in site.pages %}
+{%- assign alignment = page.alignment | downcase -%}
+<!-- starts with "ordinary"? -->
+{%- assign lowerCaseTitle = page.title | downcase -%}
+{% unless lowerCaseTitle == "" %}
+{% assign checkArray = lowerCaseTitle | split: "ordinary" %}
+{% if checkArray[0] == "" %}
+<!-- match! -->
+{% assign path = page.path | split: "." | first %}
+
+<li class="{% unless page.enabled %}disabled{% endunless %}">
+    <a href="{{ site.baseurl }}../{{ path }}">{{ page.title }}</a>: {{ page.description }}
+</li>
+
+{% endif %}
+{% endunless %}
+{% endfor %}
+</ul>
+
+
 
 ### Town-Aligned Power Roles
 These Power Roles have useful abilities which help the Town investigate, prevent, and kill Mafia members.
-- [Detective]({{ site.baseurl }}{% link roles/detective.md %}): investigates a player every night to determine alignment
-- [Doctor]({{ site.baseurl }}{% link roles/doctor.md %}): can give a player temporary immunity for a night
-- [Vigilante and Suicide Bomber]({{ site.baseurl }}{% link roles/vigilante-and-suicide-bomber.md %}): shoots people
-- [Tracker]({{ site.baseurl }}{% link roles/tracker.md %}): can see who a player targets
-- [Watcher]({{ site.baseurl }}{% link roles/watcher.md %}): can see who targets a player
+
+<ul>
+{% for page in site.pages %}
+{%- assign alignment = page.alignment | downcase -%}
+<!-- starts with "ordinary"? -->
+{%- assign lowerCaseTitle = page.title | downcase -%}
+{% unless lowerCaseTitle == "" %}
+{% assign checkArray = lowerCaseTitle | split: "ordinary" %}
+{% unless checkArray[0] == "" %}
+<!-- match! -->
+{% if alignment == "town" %}
+{% assign path = page.path | split: "." | first %}
+
+<li class="{% unless page.enabled %}disabled{% endunless %}">
+    <a href="{{ site.baseurl }}../{{ path }}">{{ page.title }}</a>: {{ page.description }}
+</li>
+
+{% endif %}
+{% endunless %}
+{% endunless %}
+{% endfor %}
+</ul>
+
+
+
 
 ### Mafia-Aligned Power Roles
 These Power Roles have useful abilities which help the Mafia in disabling the Town's Power Roles.
-- [Shaman]({{ site.baseurl }}{% link roles/shaman.md %}): also called a **roleblocker**, the Shaman can disable a player's abilities for a night
-- [Bus Driver]({{ site.baseurl }}{% link roles/bus-driver.md %}): pulls the ol' switcheroo and swaps around players so that PRs target the wrong person
-- [Traitor]({{ site.baseurl }}{% link roles/traitor.md %}): has no ability, a nerfed Mafia player without a vote in mafia kills and doesn't know who the Mafia are
+
+<ul>
+{% for page in site.pages %}
+{%- assign alignment = page.alignment | downcase -%}
+<!-- starts with "ordinary"? -->
+{%- assign lowerCaseTitle = page.title | downcase -%}
+{% unless lowerCaseTitle == "" %}
+{% assign checkArray = lowerCaseTitle | split: "ordinary" %}
+{% unless checkArray[0] == "" %}
+<!-- match! -->
+{% if alignment == "mafia" %}
+{% assign path = page.path | split: "." | first %}
+
+<li class="{% unless page.enabled %}disabled{% endunless %}">
+    <a href="{{ site.baseurl }}../{{ path }}">{{ page.title }}</a>: {{ page.description }}
+</li>
+
+{% endif %}
+{% endunless %}
+{% endunless %}
+{% endfor %}
+
+</ul>
+
+
 
 ### Neutral-Aligned Power Roles
 These Power Roles all have unique Win Conditions.
-- [Thief]({{ site.baseurl }}{% link roles/thief.md %}): steals abilities to win
-- [Jester]({{ site.baseurl }}{% link roles/jester.md %}): must get themselves lynched to win, has no abilities
-- [Executioner]({{ site.baseurl }}{% link roles/executioner.md %}): must get their assigned target lynched to win, has no abilities
+
+<ul>
+{% for page in site.pages %}
+{%- assign alignment = page.alignment | downcase -%}
+<!-- starts with "ordinary"? -->
+{%- assign lowerCaseTitle = page.title | downcase -%}
+{% unless lowerCaseTitle == "" %}
+{% assign checkArray = lowerCaseTitle | split: "ordinary" %}
+{% unless checkArray[0] == "" %}
+<!-- match! -->
+{% if alignment == "neutral" %}
+{% assign path = page.path | split: "." | first %}
+
+<li class="{% unless page.enabled %}disabled{% endunless %}">
+    <a href="{{ site.baseurl }}../{{ path }}">{{ page.title }}</a>: {{ page.description }}
+</li>
+
+{% endif %}
+{% endunless %}
+{% endunless %}
+{% endfor %}
+
+</ul>
+
 
 The following is a template for making new roles: [New Role Template]({{ site.baseurl }}{% link information/new-role-template.md %})
 
