@@ -13,23 +13,15 @@ Below is a list of the roles, including Power Roles, in Mafia. Some of them may 
 Ordinary roles have no special abilities.
 
 <ul>
-{% for page in site.pages %}
-{%- assign alignment = page.alignment | downcase -%}
-<!-- starts with "ordinary"? -->
-{%- assign lowerCaseTitle = page.title | downcase -%}
-{% unless lowerCaseTitle == "" %}
-{% assign checkArray = lowerCaseTitle | split: "ordinary" %}
-{% if checkArray[0] == "" %}
-<!-- match! -->
-{% assign path = page.path | split: "." | first %}
+{% include function.fetch-pages.html param1="layout=role"
+                                     param2="special=ordinary"
+                                     param3="enabled=yes"
+                                     template='<li><a href="$url">$title</a>: $description</li>' %}
 
-<li class="{% unless page.enabled %}disabled{% endunless %}">
-    <a href="{{ site.baseurl }}../{{ path }}">{{ page.title }}</a>: {{ page.description }}
-</li>
-
-{% endif %}
-{% endunless %}
-{% endfor %}
+{% include function.fetch-pages.html param1="layout=role"
+                                     param2="special=ordinary"
+                                     param3="enabled=no"
+                                     template='<li class="disabled"><a href="$url">$title</a>: $description</li>' %}
 </ul>
 
 
@@ -38,26 +30,19 @@ Ordinary roles have no special abilities.
 These Power Roles have useful abilities which help the Town investigate, prevent, and kill Mafia members.
 
 <ul>
-{% for page in site.pages %}
-{%- assign alignment = page.alignment | downcase -%}
-<!-- starts with "ordinary"? -->
-{%- assign lowerCaseTitle = page.title | downcase -%}
-{% unless lowerCaseTitle == "" %}
-{% assign checkArray = lowerCaseTitle | split: "ordinary" %}
-{% unless checkArray[0] == "" %}
-<!-- match! -->
-{% if alignment == "town" %}
-{% assign path = page.path | split: "." | first %}
+{% include function.fetch-pages.html param1="layout=role"
+                                     param2="special=empty"
+                                     param3="enabled=yes"
+                                     param4="alignment=town"
+                                     template='<li><a href="$url">$title</a>: $description</li>' %}
 
-<li class="{% unless page.enabled %}disabled{% endunless %}">
-    <a href="{{ site.baseurl }}../{{ path }}">{{ page.title }}</a>: {{ page.description }}
-</li>
-
-{% endif %}
-{% endunless %}
-{% endunless %}
-{% endfor %}
+{% include function.fetch-pages.html param1="layout=role"
+                                     param2="special=empty"
+                                     param3="enabled=no"
+                                     param4="alignment=town"
+                                     template='<li class="disabled"><a href="$url">$title</a>: $description</li>' %}
 </ul>
+
 
 
 
@@ -66,26 +51,17 @@ These Power Roles have useful abilities which help the Town investigate, prevent
 These Power Roles have useful abilities which help the Mafia in disabling the Town's Power Roles.
 
 <ul>
-{% for page in site.pages %}
-{%- assign alignment = page.alignment | downcase -%}
-<!-- starts with "ordinary"? -->
-{%- assign lowerCaseTitle = page.title | downcase -%}
-{% unless lowerCaseTitle == "" %}
-{% assign checkArray = lowerCaseTitle | split: "ordinary" %}
-{% unless checkArray[0] == "" %}
-<!-- match! -->
-{% if alignment == "mafia" %}
-{% assign path = page.path | split: "." | first %}
+{% include function.fetch-pages.html param1="layout=role"
+                                     param2="special=empty"
+                                     param3="enabled=yes"
+                                     param4="alignment=mafia"
+                                     template='<li><a href="$url">$title</a>: $description</li>' %}
 
-<li class="{% unless page.enabled %}disabled{% endunless %}">
-    <a href="{{ site.baseurl }}../{{ path }}">{{ page.title }}</a>: {{ page.description }}
-</li>
-
-{% endif %}
-{% endunless %}
-{% endunless %}
-{% endfor %}
-
+{% include function.fetch-pages.html param1="layout=role"
+                                     param2="special=empty"
+                                     param3="enabled=no"
+                                     param4="alignment=mafia"
+                                     template='<li class="disabled"><a href="$url">$title</a>: $description</li>' %}
 </ul>
 
 
@@ -94,28 +70,20 @@ These Power Roles have useful abilities which help the Mafia in disabling the To
 These Power Roles all have unique Win Conditions.
 
 <ul>
-{% for page in site.pages %}
-{%- assign alignment = page.alignment | downcase -%}
-<!-- starts with "ordinary"? -->
-{%- assign lowerCaseTitle = page.title | downcase -%}
-{% unless lowerCaseTitle == "" %}
-{% assign checkArray = lowerCaseTitle | split: "ordinary" %}
-{% unless checkArray[0] == "" %}
-<!-- match! -->
-{% if alignment == "neutral" %}
-{% assign path = page.path | split: "." | first %}
+{% include function.fetch-pages.html param1="layout=role"
+                                     param2="special=empty"
+                                     param3="enabled=yes"
+                                     param4="alignment=neutral"
+                                     template='<li><a href="$url">$title</a>: $description</li>' %}
 
-<li class="{% unless page.enabled %}disabled{% endunless %}">
-    <a href="{{ site.baseurl }}../{{ path }}">{{ page.title }}</a>: {{ page.description }}
-</li>
-
-{% endif %}
-{% endunless %}
-{% endunless %}
-{% endfor %}
-
+{% include function.fetch-pages.html param1="layout=role"
+                                     param2="special=empty"
+                                     param3="enabled=no"
+                                     param4="alignment=neutral"
+                                     template='<li class="disabled"><a href="$url">$title</a>: $description</li>' %}
 </ul>
 
+<br>
 
 The following is a template for making new roles: [New Role Template]({{ site.baseurl }}{% link information/new-role-template.md %})
 
