@@ -16,7 +16,6 @@ In a special 'Gang Mafia' game, where 2 Mafia teams co-exist, one Traitor is in 
 
 The Traitor does not count towards the Mafia win condition. This means that if all Mafia are killed, even if there is an alive Traitor, the Town win.
 
-### Interactions
 {% capture interactions %}
 
 Detective > Traitor;
