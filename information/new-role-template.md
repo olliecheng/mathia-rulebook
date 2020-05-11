@@ -10,8 +10,8 @@ permalink: /new-role-template/
 {% raw %}
 ```
 ---
-title: <name of role>
-layout: role
+title: name of role
+layout: role           <- THIS ALWAYS STAYS EXACTLY AS IT'S WRITTEN!
 alignment: town OR mafia OR neutral
 enabled: yes OR no
 description: short description of role
