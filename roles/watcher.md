@@ -6,6 +6,15 @@ enabled: no
 description: can see who targets a player
 ---
 
-Description of the role goes here.
+Every night, the Watcher can target a player to learn which players (excluding themselves) also target that player.
 
-Check out [Contributing]({{ site.baseurl }}{% link information/contributing.md %}) to see how to fill in this role!
+{% capture interactions %}
+Watcher > X, Y > X;
+Watcher returns "X was visited by Y";
+
+---
+Watcher > X, Y > X, Z > X, W > X;
+Watcher returns "X was visited by Y, Z, and W";
+The Tracker did not track the Mafia member who performed the kill (that was Mafia B);
+{% endcapture %}
+{% include interactions.html content=interactions %}
