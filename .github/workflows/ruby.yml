@@ -68,13 +68,6 @@ jobs:
           now --token $ZEIT_TOKEN build/ > site.txt
           echo "::set-output name=site::$(cat site.txt)" 
         
-        
-      - name: Create commit comment
-        uses: peter-evans/commit-comment@v1
-        with:
-          body: |
-            Commit built successfully! [Snapshot can be found here.](${{ steps.zeit-deploy.outputs.site }})
-            
       - name: PR comment
         uses: peter-evans/create-or-update-comment@v1
         if: github.event_name == 'pull_request'
@@ -82,3 +75,10 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
             Submitted pull request built successfully! [Snapshot can be found here.](${{ steps.zeit-deploy.outputs.site }})
+        
+      - name: Create commit comment
+        uses: peter-evans/commit-comment@v1
+        if: github.
+        with:
+          body: |
+            Commit built successfully! [Snapshot can be found here.](${{ steps.zeit-deploy.outputs.site }})
