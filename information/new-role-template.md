@@ -38,6 +38,12 @@ The Tracker did not track the Mafia member who performed the kill (that was Mafi
 
 Description of the role goes here.
 
+If there are no interactions:
+### Interactions
+The <Role> does not have any special interactions.
+
+If there are interactions:
+
 {% capture interactions %}
 
 Mafia A > Vigilante, Vigilante > Mafia A;
