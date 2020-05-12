@@ -8,7 +8,7 @@ description: pulls the ol’ switcheroo and swaps around players so that PRs tar
 
 Every night, the Bus Driver may target two players. If any player then targets one of those two players they will actually end up targetting the other one of those two players.
 
-A player that targets a player that gets targeted by the bus driver is not informed that their targetted player was also targetted by the bus driver.
+A player that targets a player that gets targeted by the bus driver is not informed that their targeted player was also targeted by the bus driver.
 
 {% capture interactions %}
 Bus Driver > Mafia X + Town Y, Detective > Mafia X;
