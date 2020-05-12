@@ -19,6 +19,12 @@ description: short description of role
 
 Description of the role goes here.
 
+
+If there are no interactions:
+### Interactions
+The <Role> does not have any special interactions.
+
+If there are interactions:
 {% capture interactions %}
 
 Mafia A > Vigilante, Vigilante > Mafia A;  <-- SEMICOLON, COMMA SEPARATED

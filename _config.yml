@@ -1,6 +1,7 @@
 # Setup
 title: Mathia Rulebook
 production_url : "https://denosawr.github.io/mathia-rulebook"
+permalink: /:title
 
 # Gems
 plugins:
