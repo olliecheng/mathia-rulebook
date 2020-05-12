@@ -12,12 +12,12 @@ There are no restrictions on who the camera man can target.
 
 {% capture interactions %}
 Jim's Security > X + Y + Z, Mafia A > X;
-Jim gets a list with four players: p1 + p2 + Mafia A + p3;
+Jim gets a list with four players: Random Player 1 + R2 + Mafia A + R3;
 The order of the names in the list is random.;
 
 ---
 Jim's Security > X + Y + Z, Mafia B > X, Thief > Y, Vigilante > Z;
-Jim returns "Thief, Mafia B, Random Player A, Vigilante";
+Jim returns "Thief + Mafia B + Random Player 1 + Vigilante";
 If two or three of Jim's targets die, then all the players responsible are included in his list.;
 
 ---
