@@ -10,5 +10,9 @@ At the start of the game, a random player is chosen as the Executioner's _target
 
 If the target dies in any way other than being lynched, the Executioner (if alive) becomes a Jester. 
 
-### Interactions
-The Executioner has no interactions.
+{% capture interactions %}
+Detective > Executioner;
+Detective returns "Innocent";
+Neutral roles show up as innocent to the detective;
+{% endcapture %}
+{% include interactions.html content=interactions %}
