@@ -15,6 +15,6 @@ Watcher returns "X was visited by Y";
 ---
 Watcher > X, Y > X, Z > X, W > X;
 Watcher returns "X was visited by Y, Z, and W";
-The Tracker did not track the Mafia member who performed the kill (that was Mafia B);
+Three different people visited player X so Watcher receives the names of three different players;
 {% endcapture %}
 {% include interactions.html content=interactions %}
