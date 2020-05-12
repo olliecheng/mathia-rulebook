@@ -5,7 +5,12 @@ alignment: neutral
 enabled: no
 description: must get themselves lynched to win, has no abilities
 ---
+The Jester's win condition is being lynched. The Jester does not win if they are killed by non-lynch methods, e.g. mafia, vigi or suicide bomber. 
 
-Description of the role goes here.
+{% capture interactions %}
+Detective > Jester; 
+Detective receives "Innocent";
+Most neutral roles return innocent. 
 
-Check out [Contributing]({{ site.baseurl }}{% link information/contributing.md %}) to see how to fill in this role!
+{% endcapture %}
+{% include interactions.html content=interactions %}
