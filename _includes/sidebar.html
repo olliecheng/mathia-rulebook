@@ -68,7 +68,9 @@
         let mainNav = document.getElementById("main-nav");
         let allPages = document.getElementById("all-pages");
 
-        searchElement.focus();
+        if (screen.width > 950) {
+            searchElement.focus();
+        }
 
         searchElement.addEventListener("input", function (e) {
             let contents = this.textContent.trim().toLowerCase();
