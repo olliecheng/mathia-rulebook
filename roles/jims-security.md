@@ -1,5 +1,5 @@
 ---
-title: Jim's security
+title: Jim's Security
 layout: role
 alignment: town
 enabled: yes
