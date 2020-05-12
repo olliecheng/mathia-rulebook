@@ -5,7 +5,7 @@ alignment: town
 enabled: yes
 description: investigates a player every night to determine alignment
 ---
-
+ 
 Every night, the Detective can target a player to learn about whether that player is "innocent" or "guilty". In general, mafia-aligned players are counted as guilty but neutral and town-aligned players are counted as innocent. See the individual role descriptions to confirm whether or not that role returns a guilty result when targetted by detective.
 
 Detective has a special interaction with shaman. If the shaman and the detective target the same person then the detective receives the opposite result to what they usually would have.
