@@ -25,5 +25,4 @@ X does not die, Thief receives staff from shaman;
 Thief's item use is concurrent with mafia shot;
 
 {% endcapture %}
-
-Check out [Contributing]({{ site.baseurl }}{% link information/contributing.md %}) to see how to fill in this role!
+{% include interactions.html content=interactions %}
