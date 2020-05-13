@@ -20,7 +20,7 @@ Bus Driver > C + D, Jim's Security > A + B + C;
 Jim's security ends up targeting A, B, and D;
 
 ---
-Watcher > A, Bus Driver > A;
+Bus Driver > A + B, Watcher > A;
 Watcher returns "Nobody visited";
 The Bus Driver is effectively invisible to the Watcher.
 {% endcapture %}
