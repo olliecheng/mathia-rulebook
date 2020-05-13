@@ -44,8 +44,8 @@ Neutral roles show up as innocent to the detective;
 
 ---
 Thief > Town X (investigate), Thief > Mafia A (steal), Shaman > Thief;
-Thief gets that Town X is guilty and does not get anything from Mafia A;
-Shaman reverses detective's result even when the magnifying glass is stolen. Shaman also roleblocks the thief from stealing so they don't get anything from the mafia.;
+Thief gets that "No result" and does not get anything from Mafia A;
+Shaman blocks Detective investigation. Shaman also roleblocks the Thief from stealing, so they don't get anything from the mafia.;
 
 {% endcapture %}
 {% include interactions.html content=interactions %}
