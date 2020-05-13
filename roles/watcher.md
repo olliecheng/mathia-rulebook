@@ -14,7 +14,7 @@ Watcher returns "X was visited by Y";
 
 ---
 Watcher > X, Y > X, Z > X, W > X;
-Watcher returns "X was visited by Y \, Z and W";
+Watcher returns "X was visited by Y + Z + W";
 Three different people visited player X so Watcher receives the names of three different players;
 {% endcapture %}
 {% include interactions.html content=interactions %}
