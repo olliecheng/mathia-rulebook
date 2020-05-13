@@ -2,10 +2,11 @@
 
 {% assign absURLBit = page.path | split: "." | first %}
 {% assign actualURL = site.baseurl | append: "/" | append: absURLBit %}
+{% assign description = page.description | downcase %}
 {% assign parseString = include.template 
     | replace: "$title", page.title 
     | replace: "$url", actualURL
-    | replace: "$description", page.description
+    | replace: "$description", description
 %}
 
 {% unless include.param1 == nil %}
