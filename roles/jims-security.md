@@ -18,7 +18,7 @@ The order of the names in the list is random.;
 ---
 Jim's Security > X + Y + Z, Mafia B > X, Thief > Y, Vigilante > Z;
 Jim returns "Thief + Mafia B + Random Player 1 + Vigilante";
-If two or three of Jim's targets die, then all the players responsible are included in his list.;
+If two or three of Jim's targets die, then all the players responsible are included in Jim's list.;
 
 ---
 Jim's Security > X + Y + Z, Mafia A > X, Doctor > X;
