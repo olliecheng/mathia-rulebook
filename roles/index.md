@@ -6,7 +6,7 @@ permalink: /roles/
 
 Below is a list of the roles, including Power Roles, in Mafia. Some of them may not be in play. While a short summary may be given for each role, click on the link for a more comprehensive description of the role.
 
-<span class="disabled">Gray test like this indicates that the role is not currently in play.</span>
+<span class="disabled">Gray text like this indicates that the role is not currently in play.</span>
 
 
 ### "Ordinary" Roles
