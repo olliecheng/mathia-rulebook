@@ -17,7 +17,7 @@ Unbeknownst to the detective, they actually targeted Player Y, so they got the r
 
 ---
 Bus Driver > C + D, Jim's Security > A + B + C;
-Jim's security ends up targeting A, B, and D;
+Jim's security ends up targeting A + B + D;
 
 ---
 Bus Driver > A + B, Watcher > A;
