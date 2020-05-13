@@ -6,9 +6,9 @@ enabled: yes
 description: shoots people
 ---
 
-Every night the Vigilante has the option of targetting a player of their choice to be killed. However, if the player that they killed is town aligned then they commit suicide the following night.
+Every night the Vigilante has the option of targeting a player of their choice to be killed. However, if the player that they killed is town aligned then they commit suicide the following night.
 
-The Vigilante is not told whether or not the person they targetted was town-aligned.
+The Vigilante is not told whether or not the person they targeted was town-aligned.
 
 {% capture interactions %}
 Vigilante > Mafia X;
