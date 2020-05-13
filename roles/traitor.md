@@ -3,7 +3,7 @@ title: Traitor
 layout: role
 alignment: mafia
 enabled: yes
-description: a mafia member that does not know and cannot communicate with its mafia buddies, and has no night abilities to help
+description: a mafia member that does not know and cannot communicate with their mafia buddies, and has no night abilities to help
 ---
 
 The Traitor, alternatively called the Minion, is not told the names of their mafia members, has no night-time abilities, but bears the knowledge that they are aligned with the mafia. The Traitor is in a separate text channel from the rest of the mafia, and thus cannot communicate nor see the names of their team members. The Traitor is unknown by the rest of the Mafia members. Note that there are no restrictions on the Traitor and other mafia members communicating through in-game whispers if they are to discover each others' identities.
