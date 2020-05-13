@@ -6,16 +6,29 @@ enabled: yes
 description: steals abilities to win
 ---
 
-The thief wins by stealing sufficient items from different targets. Each night, the thief may choose someone not chosen previously to steal from and see if they receive an item. All roles with night actions have an item (e.g. mafia, doctor) while power roles without night actions do not (executioner, mason). Items stolen from power roles with distinct night actions will be distint (e.g. mafia gun and vigilante gun are indistinguishable while doctor's item is distinguishable). Additionally, if the thief has successfully stolen an item the previous night, he may choose to use the item during the next night action concurrent with mafia shot. The thief's steal goes AFTER all other night actions.  
+The thief wins by stealing three unique items from different targets. Each night, the thief may choose someone not chosen previously to steal from and see if they receive an item. The thief can steal the following items:
+
+- **Mafia Gun** from an Ordinary Mafia
+- **Staff** from Shaman
+- **Vigilante's Gun** from Vigilante
+- **CAT Scanner** from Doctor
+- **Magnifying Glass** from Detective
+- **Voodoo Doll** from Voodoo Doll
+
+Additionally, if the Thief has successfully stolen an item the previous night, they may choose to use the item during the next night action concurrent with mafia shot. 
+
+**A player that is stolen from, is unable to use their stolen item the following night. The thief's steal goes AFTER all other night actions.**
+
+If more than one ordinary Mafia member is alive and one of them gets stolen from one night, the other Mafia member can still kill during the next night. Different Mafia guns are indistinguishable and stealing several mafia guns does not increase the number of uniquely stolen items for the thief. In Gang War Mafia (i.e. multiple Mafia factions) there is no difference between the guns of the different Mafias, or the staffs of the different shamans.
 
 {% capture interactions %}
 
-Thief > mafia A, mafia A > Thief;
+Thief > Mafia A, Mafia A > Thief;
 Thief dies and does not get gun;
 Thief's steal goes after mafia shot;
 
 ---
-Thief > mafia A (shoots), mafia A > thief;
+Thief > Mafia A (shoots), Mafia A > Thief;
 Both mafia and thief die;
 Thief's item use is concurrent with mafia shot;
 
@@ -23,6 +36,16 @@ Thief's item use is concurrent with mafia shot;
 Thief > X (saves), Thief > Shaman (steal), Mafia A > X;
 X does not die, Thief receives staff from shaman;
 Thief's item use is concurrent with mafia shot;
+
+---
+Thief > Detective, Detective > Thief;
+Thief gets a magnifying glass and detective returns "Innocent";
+Neutral roles show up as innocent to the detective;
+
+---
+Thief > Town X (investigate), Thief > Mafia A (steal), Shaman > Thief;
+Thief gets that "No result" and does not get anything from Mafia A;
+Shaman blocks Detective investigation. Shaman also roleblocks the Thief from stealing, so they don't get anything from the mafia.;
 
 {% endcapture %}
 {% include interactions.html content=interactions %}
