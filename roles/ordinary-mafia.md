@@ -7,6 +7,19 @@ description: the informed minority
 special: ordinary
 ---
 
-Description of the role goes here.
+The Ordinary Mafia have a private channel in which they can talk to each other. Every night, they nominate a member among themselves to kill a specific player of their choosing.
 
-Check out [Contributing]({{ site.baseurl }}{% link information/contributing.md %}) to see how to fill in this role!
+{% capture interactions %}
+Ordinary Mafia A > X;
+X dies;
+
+---
+Detective > Ordinary Mafia A;
+Detective returns "Guilty";
+
+---
+Ordinary Mafia A > X, Doctor > X;
+No one dies;
+The player who the mafia attempted to kill was saved by the Doctor;
+{% endcapture %}
+{% include interactions.html content=interactions %}
