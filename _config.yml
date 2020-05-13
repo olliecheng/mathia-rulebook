@@ -19,6 +19,9 @@ exclude:
   - LICENSE.md
   - README.md
   - vendor
+  
+include:
+  - .htaccess
 
 sass:
   sass_dir: _sass
