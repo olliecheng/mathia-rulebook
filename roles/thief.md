@@ -19,7 +19,7 @@ Additionally, if the Thief has successfully stolen an item the previous night, t
 
 **A player that is stolen from, is unable to use their stolen item the following night. The thief's steal goes AFTER all other night actions.**
 
-If more than one ordinary Mafia member is alive and one of them gets stolen from one night, the other Mafia member can still kill during the next night. Different Mafia guns are indistinguishable and stealing several mafia guns does not increase the number of uniquely stolen items for the thief. In Gang War Mafia (i.e. multiple Mafia factions) there is no difference between the guns of the different Mafias, or the staffs of the different shamans. Since killings in the game are concurrent, a thief stealing their third item while being killed the same night still wins.
+If more than one ordinary Mafia member is alive and one of them gets stolen from one night, the other Mafia member can still kill during the next night. Different Mafia guns are indistinguishable and stealing several mafia guns does not increase the number of uniquely stolen items for the thief. In Gang War Mafia (i.e. multiple Mafia factions) there is no difference between the guns of the different Mafias, or the staffs of the different shamans.
 
 {% capture interactions %}
 
