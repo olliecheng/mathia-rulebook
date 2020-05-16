@@ -33,6 +33,11 @@ Detective does not receive a result;
 Detective was role-blocked by shaman;
 
 ---
+Detective > Mafia X, Shaman > Mafia X;
+Detective returns "X is innocent";
+Shaman and Detective target the same person so the true investigation result is reversed
+
+---
 Detective > Town X, Shaman > Town X;
 Detective returns "X is guilty";
 Shaman and Detective target the same person so the true investigation result is reversed
