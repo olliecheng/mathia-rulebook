@@ -18,9 +18,14 @@ Player X dies;
 Doctor was blocked from saving Player X by the Shaman;
 
 ---
-Shaman > Mafia X, Detective > Mafia X, Mafia X > Town A (kill);
-Detective returns "Guilty", Town A does not die;
-Mafia X was blocked from their kill by the Shaman; Detective result does not change.;
+Shaman > Mafia X, Detective > Mafia X;
+Detective returns "X is innocent";
+Shaman and Detective target the same person so the true investigation result is reversed;
+
+---
+Shaman > Town X, Detective > Town X;
+Detective returns "X is guilty";
+Shaman and Detective target the same person so the true investigation result is reversed;
 
 {% endcapture %}
 {% include interactions.html content=interactions %}
