@@ -18,5 +18,11 @@ Coroner returns "X was Doctor";
 ---
 Coroner > Detective (dead), Shaman > Coroner;
 Coroner returns "No result";
+
+---
+Coroner > Italian Mafia X (dead);
+Coroner returns "X was Mafia";
+Coroner is not made aware of the faction of the Mafia if there are multiple factions.;
+
 {% endcapture %}
 {% include interactions.html content=interactions %}
