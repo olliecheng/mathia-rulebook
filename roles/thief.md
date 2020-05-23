@@ -13,7 +13,7 @@ The thief wins by stealing three unique items from different targets. Each night
 - **Vigilante's Gun** from Vigilante
 - **CAT Scanner** from Doctor
 - **Magnifying Glass** from Detective
-- **Voodoo Doll** from Voodoo Doll
+- **Bomb** from Big Bomb Bob (Bomber)
 
 Additionally, if the Thief has successfully stolen an item the previous night, they may choose to use the item during the next night action concurrent with mafia shot. 
 
