@@ -16,7 +16,7 @@ Below are a few rules to be strictly followed in Mathia. Both rule violations an
 
 
 ## Inactivity
-Inactivity is modeled on both activity in public chats and private ones. If you are a power role or Mafia who don't perform your actions continuously, or a town player who chooses to remain silent, you can potentially face persecution. However, if you are a Mafia who feigns inactivity publicly, by not contributing to public discussion (i.e. voting, occasional discussion, etc.), you can also face persecution.
+Inactivity is modeled on both activity in public chats and private ones. If you are a power role or Mafia who don't perform your actions continuously, or a town player who chooses to remain silent, you can potentially face persecution. Additionally, if you are a Mafia who feigns inactivity publicly, by not contributing to public discussion (i.e. voting, occasional discussion, etc.), you can also face persecution.
 
 **Persecution is currently a written write-up and a softban at the GMs' discretion.**
 
