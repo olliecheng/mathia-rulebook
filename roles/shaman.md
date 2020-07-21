@@ -10,7 +10,7 @@ Every night, the Shaman may choose a player to prevent them from performing any 
 
 Additionally, if the Shaman targets the same person that the detective targets then the detective will receive the reversed result to usual.
 
-Shaman and Ordinary Mafia do not share a private channel, but they both know each other's identities.
+Shaman and Ordinary Mafia do not share a private channel, and they do not know each others' identities. 
 
 {% capture interactions %}
 Shaman > Doctor, Doctor > Player X, Mafia > Player X;
