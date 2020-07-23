@@ -13,6 +13,7 @@ Below are a few rules to be strictly followed in Mathia. Both rule violations an
  (Sharing whisper contents (by copy-pasting, not screenshots) is acceptable, or screenshots from public channels like `#noticeboard` , `#voting` and `#general-chat`)
 - **If you have been alerted to any unnegotiable information which you shouldn't have (by accident or otherwise),** such as seeing `#mafia-headquarters` and its members, keep quiet, immediately contact the `@Game Masters` in private messages, and we will sort it out ASAP.
 - **If you modify your vote in `#voting` (abstain or changing your vote), please ~~strikethrough~~ any previous votes like this:** `~~Comrade Snowball~~` → ~~Comrade Snowball~~
+- If you use a form of obfuscation or encryption, ensure that GMs are made aware (privately or otherwise) of a reproducible method for decrypting/decoding the message contents.
 
 
 ## Inactivity
