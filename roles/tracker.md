@@ -26,5 +26,10 @@ The Tracker did not track the Mafia member who performed the kill (that was Mafi
 Tracker > Jim's Security, Jim's Security > X + Y + Z;
 Tracker returns "Visited X + Y + Z";
 Jim's Security targeted three distinct players so tracker receives 3 players in their result;
+
+---
+Tracker > Coroner, Coroner > Dead X;
+Tracker returns "Did not visit anybody";
+This is a special case, just for the Coroner.;
 {% endcapture %}
 {% include interactions.html content=interactions %}
