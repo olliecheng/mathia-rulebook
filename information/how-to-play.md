@@ -30,7 +30,7 @@ The game cycle runs as follows:
 # Voting
 The town lynch occurs through a democratic two-step voting process. Two conditions are required to be satisfied, at the time of final vote counts, in order for a proposed lynch to pass:
 
-- **At least half of all players must have been active.  
+- **Over half of all players must have been active.  
  If you wish to abstain, please explicitly state it. If you are active in any way, you are expected to cast a vote, even if it *is* an abstain. Withdrawls are counted the same as abstains.**
 This is to prevent inactivity giving voting power to a small group of people. As long as a majority of all players cast a vote, *any* vote (they don't have to agree on the target), this condition is satisfied.
 In a realistic game without any inactivity, every player should cast a vote.
