@@ -2,7 +2,7 @@
 title: Jim's Security
 layout: role
 alignment: town
-enabled: yes
+enabled: no
 description: Targets 3 players, gets 3 random players and one mafia if one of the targets die
 ---
 

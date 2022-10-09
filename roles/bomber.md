@@ -2,7 +2,7 @@
 title: Big Bomb Bob
 layout: role
 alignment: town
-enabled: yes
+enabled: no
 description: (also called the Bomber) undefendably kills people while killing themselves
 ---
 
